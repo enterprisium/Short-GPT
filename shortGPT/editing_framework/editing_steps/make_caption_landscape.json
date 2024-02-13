@@ -9,7 +9,7 @@
 		"parameters": {
 			"text": null,
 			"fontsize": 70,
-			"font": "Oswald Bold",
+			"font": "public/ProtestRiot-Regular.ttf",
 			"color": "white",
 			"stroke_width": 3,
 			"stroke_color": "black",
