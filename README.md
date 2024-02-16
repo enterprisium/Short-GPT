@@ -1,133 +1,95 @@
-# 🚀🎬 ShortGPT
-
-## (NEWS: The successor of ShortGPT, ShortX is out, an automation factory with way more capabilities than ShortGPT, check it out at [shortx.ai](https://shortx.ai?ref=sgpt))
-https://github.com/RayVentura/ShortGPT/assets/121462835/e9d9c87a-8a8c-45a0-a5fa-0baff0e067a6
-<p align="center">
-  <a href="https://discord.gg/uERx39ru3R">
-    <img src="https://dcbadge.vercel.app/api/server/uERx39ru3R?compact=true&style=flat">
-  </a>
-  <a href="https://star-history.com/#rayventura/shortgpt)">
-    <img src="https://img.shields.io/github/stars/rayventura/shortgpt?style=social">
-  </a>
-  <a href="https://pypi.org/project/shortgpt/">
-    <img src="https://static.pepy.tech/personalized-badge/shortgpt?period=month&units=international_system&left_color=blue&right_color=green&left_text=Downloads/month">
-  </a>
-  <a href="https://docs.shortgpt.ai/">
-    <img src="https://img.shields.io/badge/docs-visit-blue">
-  </a>  
-</p>
-
-<div align="center" style="border-radius: 20px;" width="18%">
-    <img src="https://github.com/RayVentura/ShortGPT/assets/121462835/083c8dc3-bac5-42c1-a08d-3ff9686d18c5" alt="ShortGPT-logo" style="border-radius: 20px;" width="18%"/>
-</div>
 <div align="center">
-  <a href="https://discord.gg/uERx39ru3R">
-    <img src="https://img.shields.io/discord/1126042224979886160?color=7289da&logo=discord&logoColor=blue&labelColor=white&color=cyan" alt="Join our Discord" height="34">
-  </a>
+
+# An approach to reverse engineer high-frequency media persuasion 
 </div>
 
 <div align="center">
-⚡ Automating video and short content creation with AI ⚡
+  🆓 Free* video and short content creation with AI 🆓
 </div>
-</br>
-
-Follow the installation steps below for running the web app locally (running the google Colab is highly recommanded). 
-Please read "installation-notes.md" for more details.
-## 🎥 Showcase ([Full video on YouTube](https://youtu.be/hpoSHq-ER8U))
-
-https://github.com/RayVentura/ShortGPT/assets/121462835/a802faad-0fd7-4fcb-aa82-6365c27ea5fe
-## 🎥 Voice Dubbing
 
 
-https://github.com/RayVentura/ShortGPT/assets/121462835/06f51b2d-f8b1-4a23-b299-55e0e18902ef
+### Installation and Use
 
-## 🌟 Show Your Support
-We hope you find ShortGPT helpful! If you do, let us know by giving us a star ⭐ on the repo. It's easy, just click on the 'Star' button at the top right of the page. Your support means a lot to us and keeps us motivated to improve and expand ShortGPT. Thank you and happy content creating! 🎉 
-
-[![GitHub star chart](https://img.shields.io/github/stars/rayventura/shortgpt?style=social)](https://github.com/RayVentura/ShortGPT/stargazers)
-## 🛠️ How it works
-![alt text](https://github.com/RayVentura/ShortGPT/assets/121462835/fcee74d4-f856-4481-949f-244558bf3bfa)
-## 📝 Introduction to ShortGPT 
-ShortGPT is a powerful framework for automating content creation. It simplifies video creation, footage sourcing, voiceover synthesis, and editing tasks.
-
-- 🎞️ **Automated editing framework**: Streamlines the video creation process with an LLM oriented video editing language.
-
-- 📃 **Scripts and Prompts**: Provides ready-to-use scripts and prompts for various LLM automated editing processes.
-
-- 🗣️ **Voiceover / Content Creation**: Supports multiple languages including English 🇺🇸, Spanish 🇪🇸, Arabic 🇦🇪, French 🇫🇷, Polish 🇵🇱, German 🇩🇪, Italian 🇮🇹, Portuguese 🇵🇹, Russian 🇷🇺, Mandarin Chinese 🇨🇳, Japanese 🇯🇵, Hindi 🇮🇳,Korean 🇰🇷, and way over 30 more languages (with EdgeTTS)
-
-- 🔗 **Caption Generation**: Automates the generation of video captions.
-
-- 🌐🎥 **Asset Sourcing**: Sources images and video footage from the internet, connecting with the web and Pexels API as necessary.
-
-- 🧠 **Memory and persistency**: Ensures long-term persistency of automated editing variables with TinyDB.
-
-## 🚀 Quick Start: Run ShortGPT on Google Colab (https://colab.research.google.com/drive/1_2UKdpF6lqxCqWaAcZb3rwMVQqtbisdE?usp=sharing)
-
-If you prefer not to install the prerequisites on your local system, you can use the Google Colab notebook. This option is free and requires no installation setup.
-
-1. Click on the link to the Google Colab notebook: [https://colab.research.google.com/drive/1_2UKdpF6lqxCqWaAcZb3rwMVQqtbisdE?usp=sharing](https://colab.research.google.com/drive/1_2UKdpF6lqxCqWaAcZb3rwMVQqtbisdE?usp=sharing)
-
-2. Once you're in the notebook, simply run the cells in order from top to bottom. You can do this by clicking on each cell and pressing the 'Play' button, or by using the keyboard . Enjoy using ShortGPT!
-
-# Instructions for running shortGPT locally
-This guide provides step-by-step instructions for installing shortGPT and its dependencies.
-To run ShortGPT locally, you need Docker.
-
-## Installation Steps
-
-To run ShortGPT, you need to have docker. Follow the instructions "installation-notes.md" for more details.
-
-1. For running the Dockerfile, do this:
-```bash
-docker build -t short_gpt_docker:latest .
-docker run -p 31415:31415 --env-file .env short_gpt_docker:latest
-```
-## Running runShortGPT.py Web Interface
-
-2. After running the script, a Gradio interface should open at your local host on port 31415 (http://localhost:31415)
- 
-
-## Framework overview
-
-- 🎬 The `ContentShortEngine` is designed for creating shorts, handling tasks from script generation to final rendering, including adding YouTube metadata.
-
-- 🎥 The `ContentVideoEngine` is ideal for longer videos, taking care of tasks like generating audio, automatically sourcing background video footage, timing captions, and preparing background assets.
-
-- 🗣️ The `ContentTranslationEngine` is designed to dub and translate entire videos, from mainstream languages to more specific target languages. It takes a video file, or youtube link, transcribe it's audio, translates the content, voices it in a target language, adds captions , and gives back a new video, in a totally different language.
-
-- 🎞️ The automated `EditingEngine`, using Editing Markup Language and JSON, breaks down the editing process into manageable and customizable blocks, comprehensible to Large Language Models.
-
-💡 ShortGPT offers customization options to suit your needs, from language selection to watermark addition.
-
-🔧 As a framework, ShortGPT is adaptable and flexible, offering the potential for efficient, creative content creation.
-
-More documentation incomming, please be patient.
+#### *
+The Main branch relies on the paid OpenAI API to work. This has been resolved (not released yet❗) by implementing LlamaCpp for locally hosted Langchain agents instead.
+For setup refer to the main [repo](https://docs.shortgpt.ai/docs/how-to-install) and installation [guide](https://docs.shortgpt.ai/docs/how-to-install)
 
 
-## Technologies Used
+### Upload Automation 
 
-ShortGPT utilizes the following technologies to power its functionality:
+1. Authentication (client-secrets.json from Google API console)
 
-- **Moviepy**: Moviepy is used for video editing, allowing ShortGPT to make video editing and rendering
+- Head to the Google API Console at https://console.cloud.google.com/ and create a project.
 
-- **Openai**: Openai is used for automating the entire process, including generating scripts and prompts for LLM automated editing processes.
+- In the marketplace (search bar), find 'YouTube v3 API' and enable it.
 
-- **ElevenLabs**: ElevenLabs is used for voice synthesis, supporting multiple languages for voiceover creation.
+- After redirect, click on Oauth Screen and create.
 
-- **EdgeTTS**: Microsoft's FREE EdgeTTS is used for voice synthesis, supporting way many more language than ElevenLabs currently.
+- Add google.com as the authorized domain.
 
-- **Pexels**: Pexels is used for sourcing background footage, allowing ShortGPT to connect with the web and access a wide range of images and videos.
+<div style="display: flex;">
+    <img width="300" height="300" src="https://github.com/su77ungr/FreeShortGPT/assets/69374354/47fc77a7-2111-489a-9b6e-f2434cbb44ea">
+    -> Add scopes for the YouTube v3 API.
+    <img width="300" height="300" src="https://github.com/su77ungr/FreeShortGPT/assets/69374354/dbd2abef-72d4-4303-b739-6be947f525b2">
+</div>
 
-- **Bing Image**: Bing Image is used for sourcing images, providing a comprehensive database for ShortGPT to retrieve relevant visuals.
+- Add the channel's email as the test user (in most cases, the email the channel was registered with).
 
-These technologies work together to provide a seamless and efficient experience in automating video and short content creation with AI.
+- Create Credentials (OAuth Client ID) in the Credentials Menu and select Web App.
 
-## 💁 Contributing
+- For Authorized Redirect URIs, use:
+    1. http://localhost:8080
+    2. http://localhost:8080/
+    3. http://localhost:8090
+    4. http://localhost:8090/
 
-As an open-source project in a rapidly developing field, we are extremely open to contributions, whether it would be in the form of a new feature, improved infrastructure, or better documentation.
-<p align="center">
-  <a href="https://star-history.com/#RayVentura/ShortGPT&Date">
-    <img src="https://api.star-history.com/svg?repos=RayVentura/ShortGPT&type=Date" alt="Star History Chart">
-  </a>
-</p>
+- Finish up with downloading the .JSON file and put it inside this repository's directory.
+
+
+> Note:  For more information about the `client_secrets.json` file format, please visit: [api-client-library/python/guide/aaa_client_s](https://developers.google.com/api-client-library/python/guide/aaa_client_s)
+
+2. Oauth2.json (within the repo itself) 
+   
+- Once a valid `client_secrets.json` is present in the directory, run `python3 upload.py` and follow further instructions. After successful authentication, an `oauth2.json` file will be created inside the directory.
+
+
+> Note: You can avoid quota bottlenecks by stacking up projects in the google console and repeat steps before 
+
+3. Automation
+
+Once valid oauth2 credentials exist in the directory you can let this run 100% on autopilot. 
+
+- `ultra.py` is the main script to direct the video production pipeling
+- `upload.py` sets the backbone for youtube's v3 api to upload to YouTube without further authentification
+- `final_upload.py` combines the finsished product and uploads it to YouTube (title, description, tags get parsed automatically)
+
+Just craft your own bash script or use `automate.sh`
+
+
+### Upgrades
+- access YouTube as provider of video assets, surpassing stock footage by large
+- avoids bans by using download streams with PyTube
+- avoids YouTube v3 API's rate limit and auth
+- avoids Pexels hard rate limit 
+
+### Features 
+
+
+Inside `api_utils` functions provide utility for working with different APIs. Files: `image_api.py`, `pexels_api.py`,  `youtube_api.py` and `eleven_api.py`. We added  `youtube_api.py` to source video assets directly from YouTube. Feel free to modify `the _generateVideoUrls` function for the hierachy of video asset sources. 
+
+-  #### `search_videos_YouTube(query_string)`
+  
+      The search_videos_YouTube function takes a query string as input and searches for a video on YouTube based on that query. It returns the URL of the first search result if found, or None if no video is found.
+      
+      Integration of `shortGPT.api_utils.youtube_api`, which serves as an additional source for gathering footage based on the queried keyword. This is particularly useful when dealing with niche / comedy / meme topics where stock footage is not available. If nothing matches we backtrack to the pexels API. 
+
+-  #### `triage_videos_Youtube(expected_score_parameter)` ❗not released yet
+
+### Demo (average view duration: 143% @ 10k views) 
+
+demo_new shows the accuracy of the newly added youtube query policy ***without*** further guidance, backtesting or content analysis. This can be improved by adding a content triage based on Clip2 and transcript analysis.
+
+
+<div align="center">
+<img width=300 src="https://github.com/su77ungr/FreeShortGPT/assets/69374354/5a8e3032-982e-48da-bf17-76ed93d08fe5">
+</div>
