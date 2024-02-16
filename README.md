@@ -1,52 +1,20 @@
-<div align="center">
-
-# An approach to reverse engineer high-frequency media persuasion 
-</div>
-
-<div align="center">
-  🆓 Free* video and short content creation with AI 🆓
-</div>
-
-
-### Installation and Use
-
-#### *
-The Main branch relies on the paid OpenAI API to work. This has been resolved (not released yet❗) by implementing LlamaCpp for locally hosted Langchain agents instead.
-For setup refer to the main [repo](https://docs.shortgpt.ai/docs/how-to-install) and installation [guide](https://docs.shortgpt.ai/docs/how-to-install)
-
-
 ### Upload Automation 
 
 1. Authentication (client-secrets.json from Google API console)
-
 - Head to the Google API Console at https://console.cloud.google.com/ and create a project.
-
 - In the marketplace (search bar), find 'YouTube v3 API' and enable it.
-
 - After redirect, click on Oauth Screen and create.
-
 - Add google.com as the authorized domain.
-
-<div style="display: flex;">
-    <img width="300" height="300" src="https://github.com/su77ungr/FreeShortGPT/assets/69374354/47fc77a7-2111-489a-9b6e-f2434cbb44ea">
-    -> Add scopes for the YouTube v3 API.
-    <img width="300" height="300" src="https://github.com/su77ungr/FreeShortGPT/assets/69374354/dbd2abef-72d4-4303-b739-6be947f525b2">
-</div>
-
+- Add scopes for the YouTube v3 API.
 - Add the channel's email as the test user (in most cases, the email the channel was registered with).
-
 - Create Credentials (OAuth Client ID) in the Credentials Menu and select Web App.
-
 - For Authorized Redirect URIs, use:
     1. http://localhost:8080
     2. http://localhost:8080/
     3. http://localhost:8090
     4. http://localhost:8090/
-
 - Finish up with downloading the .JSON file and put it inside this repository's directory.
 
-
-> Note:  For more information about the `client_secrets.json` file format, please visit: [api-client-library/python/guide/aaa_client_s](https://developers.google.com/api-client-library/python/guide/aaa_client_s)
 
 2. Oauth2.json (within the repo itself) 
    
@@ -82,14 +50,3 @@ Inside `api_utils` functions provide utility for working with different APIs. Fi
       The search_videos_YouTube function takes a query string as input and searches for a video on YouTube based on that query. It returns the URL of the first search result if found, or None if no video is found.
       
       Integration of `shortGPT.api_utils.youtube_api`, which serves as an additional source for gathering footage based on the queried keyword. This is particularly useful when dealing with niche / comedy / meme topics where stock footage is not available. If nothing matches we backtrack to the pexels API. 
-
--  #### `triage_videos_Youtube(expected_score_parameter)` ❗not released yet
-
-### Demo (average view duration: 143% @ 10k views) 
-
-demo_new shows the accuracy of the newly added youtube query policy ***without*** further guidance, backtesting or content analysis. This can be improved by adding a content triage based on Clip2 and transcript analysis.
-
-
-<div align="center">
-<img width=300 src="https://github.com/su77ungr/FreeShortGPT/assets/69374354/5a8e3032-982e-48da-bf17-76ed93d08fe5">
-</div>
