@@ -51,3 +51,10 @@ This function takes an API key as input and retrieves the remaining character li
 #### `generateVoice(text, character, fileName, stability=0.2, clarity=0.1, api_key="")`
 
 This function takes a text input, a character name, a file name, and optional parameters `stability`, `clarity`, and `api_key` as input. It generates a voice recording using the Eleven API and saves it to the specified file. The character name is used to select the appropriate voice. The stability and clarity parameters control the quality of the voice recording. The API key is required for authentication. If the request is successful, the file name is returned. Otherwise, an empty string is returned.
+
+
+## File: youtube_api.py
+
+#### `search_videos_YouTube(query_string)`
+
+The search_videos_YouTube function takes a query string as input and searches for a video on YouTube based on that query. It returns the URL of the first search result if found, or None if no video is found.
