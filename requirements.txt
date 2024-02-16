@@ -19,4 +19,8 @@ moviepy==1.0.3
 progress
 questionary
 edge-tts
+pytube
+typing-extensions==4.7.1
+google-api-python-client
+oauth2client
 TTS==0.22.0
