@@ -33,4 +33,4 @@ with open(os.path.join(directory, text_file), 'r') as file:
 
 # Run the upload script with the latest mp4 and txt files
 if video_file and text_file:
-    os.system(f'python3 upload.py --file="{directory}{video_file}" --privacyStatus="public" --title="{title}" --description="{description}"')
+    os.system(f'python upload.py --file="{directory}{video_file}" --privacyStatus="public" --title="{title}" --description="{description}"')
