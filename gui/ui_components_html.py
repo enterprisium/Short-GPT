@@ -5,7 +5,6 @@ class GradioComponentsHTML:
         '''Create HTML for the header'''
         return '''
             <div style="display: flex; justify-content: space-between; align-items: center; padding: 5px;">
-            <h1 style="margin-left: 0px; font-size: 35px;">ShortGPT</h1>
             <div style="flex-grow: 1; text-align: right;">
             </div>
             </div>
