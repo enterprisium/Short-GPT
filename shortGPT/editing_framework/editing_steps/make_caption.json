@@ -15,10 +15,7 @@
       "stroke_width": 3,
       "stroke_color": "black",
       "method": "caption",
-      "size": [
-        900,
-        null
-      ],
+      "size": [900, null],
       "words_to_show": 4,
       "highlight_method": "dynamic_word"
     },
